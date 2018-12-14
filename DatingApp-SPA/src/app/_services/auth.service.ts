@@ -17,8 +17,7 @@ export class AuthService {
       if (user) {
         localStorage.setItem('token', user.token);
       }
-    })
-  );
-}
+    }));
+  }
 
 }
