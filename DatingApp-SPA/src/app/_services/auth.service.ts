@@ -10,6 +10,7 @@ export class AuthService {
 
   baseUrl = 'http://localhost:5000/api/auth/';
   jwtHelper = new JwtHelperService();
+  decodedToken: any;
 
   constructor(private http: HttpClient) { }
 
@@ -18,6 +19,8 @@ export class AuthService {
       const user = response;
       if (user) {
         localStorage.setItem('token', user.token);
+        this.decodedToken = this.jwtHelper.decodeToken(user.token);
+        console.log(this.decodedToken);
       }
     }));
   }
