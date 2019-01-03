@@ -82,7 +82,7 @@ namespace DatingApp.API
 
             /* app.UseHttpsRedirection(); */
             // if database dropped - uncomment the seed
-            // seeder.SeedUser();
+            //seeder.SeedUsers();
             app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             app.UseAuthentication();
             app.UseMvc();
