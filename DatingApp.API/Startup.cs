@@ -111,7 +111,7 @@ namespace DatingApp.API
 
             /* app.UseHttpsRedirection(); */
             // if database dropped - uncomment the seed
-            //seeder.SeedUsers();
+            seeder.SeedUsers();
             app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             app.UseAuthentication();
             app.UseDefaultFiles();
